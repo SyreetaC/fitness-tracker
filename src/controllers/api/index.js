@@ -20,12 +20,12 @@ const createWorkout = async (req, res) => {
   }
 };
 
-const updateWorkout = (req, res) => {
+const updateWorkout = async (req, res) => {
   try {
     const { id } = req.params;
     const exercise = req.body;
 
-    const updatedWorkout = Workout.findByIdAndUpdate(
+    const updatedWorkout = await Workout.findByIdAndUpdate(
       id,
       { $push: { exercises: exercise } },
       { new: true, runValidators: true }
@@ -35,10 +35,6 @@ const updateWorkout = (req, res) => {
     console.log(error.message);
     return res.status(500).json({ error: "Failed to update workout" });
   }
-
-  //update a workout where the id is id
-  //res.json the updated workout
-  // catch any errors
 };
 
 const getAggregateWorkouts = (req, res) => {};
