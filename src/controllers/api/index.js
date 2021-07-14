@@ -1,8 +1,9 @@
-const { Workout } = require("../../models/Workout");
+const { Workout } = require("../../models");
 
 const getAllWorkouts = async (req, res) => {
   try {
     const workouts = await Workout.find({});
+    console.log(workouts);
     return res.json({ workouts });
   } catch (error) {
     console.log(error.message);
@@ -11,7 +12,7 @@ const getAllWorkouts = async (req, res) => {
 };
 
 const createWorkout = (req, res) => {
-  // new workout from the req.body
+  // new workout info from the req.body
   //.create to create a new workout, passing in the body
   //handle error
 };
