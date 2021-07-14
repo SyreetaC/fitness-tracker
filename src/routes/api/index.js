@@ -1,7 +1,11 @@
 const router = require("express").Router();
 
-const { getAllWorkouts } = require("../../controllers/api/index");
+const {
+  getAllWorkouts,
+  createWorkout,
+} = require("../../controllers/api/index");
 
 router.get("/api/workouts", getAllWorkouts);
+router.post("/api/workouts", createWorkout);
 
 module.exports = router;
