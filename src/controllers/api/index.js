@@ -3,7 +3,6 @@ const { Workout } = require("../../models");
 const getAllWorkouts = async (req, res) => {
   try {
     const workouts = await Workout.find({});
-    console.log(workouts);
     return res.json({ workouts });
   } catch (error) {
     console.log(error.message);
@@ -22,8 +21,21 @@ const createWorkout = async (req, res) => {
 };
 
 const updateWorkout = (req, res) => {
-  const id = req.params.id;
-  console.log(id);
+  try {
+    const { id } = req.params;
+    const exercise = req.body;
+
+    const updatedWorkout = Workout.findByIdAndUpdate(
+      id,
+      { $push: { exercises: exercise } },
+      { new: true, runValidators: true }
+    );
+    return res.json(updatedWorkout);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to update workout" });
+  }
+
   //update a workout where the id is id
   //res.json the updated workout
   // catch any errors
