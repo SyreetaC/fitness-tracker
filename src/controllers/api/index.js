@@ -7,4 +7,6 @@ const getAllWorkouts = (req, res) => {
 
 const createWorkout = (req, res) => {};
 
-module.exports = { getAllWorkouts, createWorkout };
+const updateWorkout = (req, res) => {};
+
+module.exports = { getAllWorkouts, createWorkout, updateWorkout };
