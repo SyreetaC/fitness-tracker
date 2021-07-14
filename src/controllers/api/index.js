@@ -11,10 +11,14 @@ const getAllWorkouts = async (req, res) => {
   }
 };
 
-const createWorkout = (req, res) => {
-  // new workout info from the req.body
-  //.create to create a new workout, passing in the body
-  //handle error
+const createWorkout = async (req, res) => {
+  try {
+    const workout = await Workout.create({});
+    return res.json(workout);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to create a workout" });
+  }
 };
 
 const updateWorkout = (req, res) => {
@@ -25,4 +29,11 @@ const updateWorkout = (req, res) => {
   // catch any errors
 };
 
-module.exports = { getAllWorkouts, createWorkout, updateWorkout };
+const getAggregateWorkouts = (req, res) => {};
+
+module.exports = {
+  getAllWorkouts,
+  createWorkout,
+  updateWorkout,
+  getAggregateWorkouts,
+};
