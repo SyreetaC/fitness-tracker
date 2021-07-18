@@ -14,7 +14,6 @@ https://nameless-tundra-69456.herokuapp.com/?id=60f2b62b4a929800214f5d18
 
   - [Description](#description)
   - [Link to deployed application](#link-to-deployed-application)
-
   - [Installation](#installation)
   - [Techonologies](#techonologies)
   - [Github Link](#github-link)
@@ -40,3 +39,9 @@ https://nameless-tundra-69456.herokuapp.com/?id=60f2b62b4a929800214f5d18
 https://github.com/SyreetaC
 
 ## Screenshots
+
+![screenshot1](</src/public/assets/screenshots/Screenshot%20(41).png>)
+![screenshot2](</src/public/assets/screenshots/Screenshot%20(42).png>)
+![screenshot3](</src/public/assets/screenshots/Screenshot%20(43).png>)
+![screenshot4](</src/public/assets/screenshots/Screenshot%20(44).png>)
+![screenshot5](</src/public/assets/screenshots/Screenshot%20(45).png>)
