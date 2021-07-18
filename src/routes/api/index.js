@@ -7,9 +7,9 @@ const {
   getAggregateWorkouts,
 } = require("../../controllers/api/index");
 
-router.get("/api/workouts", getLastWorkout);
-router.post("/api/workouts", createWorkout);
-router.put("/api/workouts/:id", updateWorkout);
-router.get("/api/workouts/range", getAggregateWorkouts);
+router.get("/workouts", getLastWorkout);
+router.post("/workouts", createWorkout);
+router.put("/workouts/:id", updateWorkout);
+router.get("/workouts/range", getAggregateWorkouts);
 
 module.exports = router;
